@@ -1,0 +1,98 @@
+\documentclass[a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{polski}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{amsmath, amssymb}
+%\UseRawInputEncoding
+\newcounter{task}[section]
+\newenvironment{task}[1][]{\refstepcounter{task}\par\medskip
+  Zadanie~\thetask#1  \rmfamily }{\medskip}
+\setcounter{task}{0}
+\newcommand{\mylisting}[2][]{%
+    \lstinputlisting[caption={\texttt{\detokenize{#2}}},#1]{#2}%
+}
+\pdfsuppresswarningpagegroup=1
+
+\title{Projekt\\Liniowy dyskryminator Fishera}
+\date{2021}
+\author{Tomasz Dądela}
+
+\begin{document}
+				\maketitle
+\begin{section}{Treść zadania}
+				Projekt polega na stworzeniu klasyfikatora, który na podstawie danych uczących będzie w stanie klasyfikować dane, których wcześniej nie widział. Student może wybrać do implementacji naiwny klasyfikator Bayesowski lub klasyfikator Fishera (liniowa analiza dyskryminacyjna Fishera, LDA) dla klasyfikacji binarnej (w przypadku klasyfikatora Fishera można zaimplementować klasyfikację do wielu klas). W rozwiązaniu nie wolno wykorzystywać gotowych bibliotek/frameworków realizujących działanie klasyfikatorów. Same klasyfikatory należy zaimplementować samodzielnie.
+
+				Klasyfikator powinien działać w dwóch trybach: nauki i klasyfikacji. W trybie nauki powinien na wejściu dostawać zbiór uczący z wyróżnioną zmienną oznaczającą poprawną klasę. W trybie klasyfikacji powinien dostawać na wejście zbiór a na wyjściu dla każdego elementu z tego zbioru powinien zwracać przewidzianą klasę.
+
+				W ramach eksperymentów należy zbadać skuteczność nauczonego na określonym zbiorze danych klasyfikatora przy pomocy takich miar jak dokładność, precyzja, miara F1, krzywe ROC itp. (zrobić wcześniej research dotyczący metod oceny klasyfikatorów, a także dotyczący metod kroswalidacji)
+
+				Do projektu można wykorzystać np. zbiory danych ze strony uci.edu\footnote{https://archive.ics.uci.edu/ml/index.php}. Po wyborze zbioru (zbiorów) danych (powinny być „interesujące”, nie trywialne) należy przeprowadzić jego (ich) analizę (opisać zmienne (parametry), zbadać ich zależność, korelacje, elementy odstające, zbadać czy w zbiorze są braki itp.), a następnie opracować procedurę uczenia klasyfikatora (np. z zastosowaniem kroswalidacji), przeprowadzić eksperymenty i ocenić jakość klasyfikatora.
+\end{section}
+\begin{section}{Zbiór danych}
+				Do przeprowadzenia analizy wybrałem zbiór danych "Banknote authentication Data Set"\footnote{https://archive.ics.uci.edu/ml/datasets/banknote+authentication} Zbiór zawiera dane otrzymane za pomocą analizy zdjęć banknotów wykonanych na potrzeby sprawdzenia ich autentyczności.\\
+Na w/w stronie dostępne są następujące informacje na temat danych:\\
+\begin{subsection}*{Abstract}
+				Data were extracted from images that were taken for the evaluation of an authentication procedure for banknotes.
+\end{subsection}
+\begin{subsection}*{Source}
+Owner of database: Volker Lohweg (University of Applied Sciences, Ostwestfalen-Lippe, volker.lohweg '@' hs-owl.de)\\
+Donor of database: Helene Dörksen (University of Applied Sciences, Ostwestfalen-Lippe, helene.doerksen '@' hs-owl.de)\\
+Date received: August, 2012
+\end{subsection}
+\begin{subsection}*{Data Set Information}
+Data were extracted from images that were taken from genuine and forged banknote-like specimens. For digitization, an industrial camera usually used for print inspection was used. The final images have 400x 400 pixels. Due to the object lens and distance to the investigated object gray-scale pictures with a resolution of about 660 dpi were gained. Wavelet Transform tool were used to extract features from images.
+\end{subsection}
+\begin{subsection}*{Attribute Information}
+		\begin{enumerate}
+				\item variance of Wavelet Transformed image (continuous)
+				\item skewness of Wavelet Transformed image (continuous)
+				\item curtosis of Wavelet Transformed image (continuous)
+				\item entropy of image (continuous)
+				\item class (integer)
+		\end{enumerate}
+\end{subsection}
+\begin{subsection}{Wartości parametrów}
+\lstinputlisting[language=Python]{data_basic_information.py}
+\lstinputlisting[]{data_basic_information_output.txt}
+Zbiór danych zawiera 762 banknoty klasy 0 (banknoty autentyczne\footnote{https://jamesmccaffrey.wordpress.com/2020/08/18/in-the-banknote-authentication-dataset-class-0-is-genuine-authentic/}) oraz 610 banknotów klasy 1 (banknoty sfałszowane).\\
+Zbiór danych nie zawiera pustych parametrów.\\
+\end{subsection}
+\begin{subsection}{Wizualizacja danych}
+				\lstinputlisting[language=Python]{visualization.py}
+				%\centering
+				%\noindent
+				%\includegraphics[width=1.4\textwidth]{Figure_1.png}
+				\begin{figure}
+  \noindent\makebox[\textwidth]{%
+  \includegraphics[width=1.7\textwidth]{Figure_1.png}}
+  %\caption{...}
+\end{figure}
+\end{subsection}
+\newpage
+\begin{subsection}{Elementy odstające}
+				\lstinputlisting[language=Python]{outlier.py}
+				\newpage
+				\lstinputlisting{outlier_output.txt}
+				\textbf{Zadecydowałem nie usuwać żadnego z rekordów.}
+				\newpage
+\end{subsection}
+\begin{subsection}{Korelacja danych}
+				\lstinputlisting[language=Python]{correlation.py}
+				\lstinputlisting{correlation.txt}
+				\newpage
+\end{subsection}
+\begin{subsection}{Podział danych}
+				\lstinputlisting[language=Python]{divide_data_into_k_groups.py}
+\end{subsection}
+\end{section}
+\begin{section}{Liniowy dyskryminator Fishera}
+				\lstinputlisting[language=Python]{lda.py}
+				\newpage
+				\lstinputlisting{lda_output.txt}
+\end{section}
+\end{document}

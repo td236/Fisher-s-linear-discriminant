@@ -1,0 +1,22 @@
+          variance  skewness  curtosis   entropy     class
+variance  1.000000  0.264026 -0.380850  0.276817 -0.724843
+skewness  0.264026  1.000000 -0.786895 -0.526321 -0.444688
+curtosis -0.380850 -0.786895  1.000000  0.318841  0.155883
+entropy   0.276817 -0.526321  0.318841  1.000000 -0.023424
+class    -0.724843 -0.444688  0.155883 -0.023424  1.000000
+
+Fake
+          variance  skewness  curtosis   entropy  class
+variance  1.000000 -0.226662 -0.329991  0.416110    NaN
+skewness -0.226662  1.000000 -0.750740 -0.674411    NaN
+curtosis -0.329991 -0.750740  1.000000  0.414543    NaN
+entropy   0.416110 -0.674411  0.414543  1.000000    NaN
+class          NaN       NaN       NaN       NaN    NaN
+
+Authentic
+          variance  skewness  curtosis   entropy  class
+variance  1.000000  0.073689 -0.473867  0.324043    NaN
+skewness  0.073689  1.000000 -0.887664 -0.508938    NaN
+curtosis -0.473867 -0.887664  1.000000  0.276017    NaN
+entropy   0.324043 -0.508938  0.276017  1.000000    NaN
+class          NaN       NaN       NaN       NaN    NaN

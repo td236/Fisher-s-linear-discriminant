@@ -1,0 +1,13 @@
+       variance  skewness  curtosis  entropy  class
+count    1372.0    1372.0    1372.0   1372.0 1372.0
+mean        0.4       1.9       1.4     -1.2    0.4
+std         2.8       5.9       4.3      2.1    0.5
+min        -7.0     -13.8      -5.3     -8.5    0.0
+25%        -1.8      -1.7      -1.6     -2.4    0.0
+50%         0.5       2.3       0.6     -0.6    0.0
+75%         2.8       6.8       3.2      0.4    1.0
+max         6.8      13.0      17.9      2.4    1.0
+Licznosc poszczegolnych klas: 
+ 0    762
+1    610
+Name: class, dtype: int64

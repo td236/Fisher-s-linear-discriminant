@@ -1,0 +1,61 @@
+Mahalanobis distance: 5.090
+FP:  140
+FN:  3
+TN:  131
+FT:  0
+Accuracy: 0.989
+PPV: 1.000
+NPV: 0.978
+Recall: 0.979
+F1: 0.989
+
+Mahalanobis distance: 5.129
+FP:  150
+FN:  0
+TN:  124
+FT:  0
+Accuracy: 1.000
+PPV: 1.000
+NPV: 1.000
+Recall: 1.000
+F1: 1.000
+
+Mahalanobis distance: 4.939
+FP:  153
+FN:  1
+TN:  118
+FT:  3
+Accuracy: 0.985
+PPV: 0.981
+NPV: 0.992
+Recall: 0.994
+F1: 0.987
+
+Mahalanobis distance: 5.136
+FP:  162
+FN:  2
+TN:  108
+FT:  2
+Accuracy: 0.985
+PPV: 0.988
+NPV: 0.982
+Recall: 0.988
+F1: 0.988
+
+Mahalanobis distance: 5.138
+FP:  147
+FN:  4
+TN:  123
+FT:  1
+Accuracy: 0.982
+PPV: 0.993
+NPV: 0.969
+Recall: 0.974
+F1: 0.983
+
+Mahalanobis distance mean: 5.086
+Accuracy mean: 0.988
+PPV mean: 0.992
+NPV mean: 0.984
+Recall mean: 0.987
+F1 mean: 0.990

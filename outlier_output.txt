@@ -1,0 +1,42 @@
+factor:  1.5
+Colunm variance -  # outliers:  0
+Colunm skewness -  # outliers:  0
+Colunm curtosis -  # outliers:  59
+Colunm entropy -   # outliers:  33
+factor:  2.5
+Colunm variance -  # outliers:  0
+Colunm skewness -  # outliers:  0
+Colunm curtosis -  # outliers:  17
+Colunm entropy -   # outliers:  0
+
+factor:  1.5
+Colunm variance -  # outliers:  1
+Colunm skewness -  # outliers:  0
+Colunm curtosis -  # outliers:  0
+Colunm entropy -   # outliers:  19
+factor:  2.0
+Colunm variance -  # outliers:  0
+Colunm skewness -  # outliers:  0
+Colunm curtosis -  # outliers:  0
+Colunm entropy -   # outliers:  8
+factor:  2.5
+Colunm variance -  # outliers:  0
+Colunm skewness -  # outliers:  0
+Colunm curtosis -  # outliers:  0
+Colunm entropy -   # outliers:  0
+
+factor:  1.5
+Colunm variance -  # outliers:  3
+Colunm skewness -  # outliers:  0
+Colunm curtosis -  # outliers:  10
+Colunm entropy -   # outliers:  15
+factor:  2.0
+Colunm variance -  # outliers:  0
+Colunm skewness -  # outliers:  0
+Colunm curtosis -  # outliers:  0
+Colunm entropy -   # outliers:  0
+factor:  2.5
+Colunm variance -  # outliers:  0
+Colunm skewness -  # outliers:  0
+Colunm curtosis -  # outliers:  0
+Colunm entropy -   # outliers:  0
